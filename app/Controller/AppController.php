@@ -45,7 +45,7 @@ class AppController extends Controller {
 	 * @return void 
 	 * @author Alejo JM <alejo.jm@gmail.com>
 	 */
-	function beforeFilter(){
+	public function beforeFilter(){
 		App::uses('Sanitize', 'Utility');
 		$this->request->query  = Sanitize::clean($this->request->query);
 		$this->request->data   = Sanitize::clean($this->request->data);

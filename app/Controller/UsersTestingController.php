@@ -30,13 +30,17 @@ class UsersTestingController {
 		return $validData ? $this->generateDataValid : $this->generateDataBad;
 	}
 	
-	public function addFavorite(){
-		return array('UsersDeals'=>array(
-				'user_uid' => '4fdb9398-e610-4ad9-9710-01399608dbc9',
-				'deal_id' => '1',
-			)
-		);
-	}
+	public function addTask(){
+		$data['Task']['name']='My new task';
+		$data['Task']['priority_id']='2';
+		$data['Task']['due_date']['month']='04';
+		$data['Task']['due_date']['day']='05';
+		$data['Task']['due_date']['year']='2013';
+		$data['Task']['due_date']['hour']='01';
+		$data['Task']['due_date']['min']='08';
+		$data['Task']['due_date']['meridian']='am';
+		return $data;
+	}		
 
 }
 
